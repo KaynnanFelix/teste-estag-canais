@@ -5,7 +5,7 @@ from utils import convert_data_entry_to_dictionary_format, is_data_valid, is_emp
 from inputValidation import all_data_informed
 
 
-with open('my_program/entrada.txt', 'r', encoding='utf-8') as file:
+with open('entrada.txt', 'r', encoding='utf-8') as file:
     for line in file:
         if (is_header(line)):
             continue
