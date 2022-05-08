@@ -1,21 +1,28 @@
 from messages import error_message, success_message
 
+
 def validation_pix(valor_transferencia):
-    if (valor_transferencia > 0.00 and valor_transferencia <= 5000.00):
+    if (valor_transferencia < 0.00):
+        print(error_message('valor de transferência menor ou igual R$ 0,00'))
+        return False
+    elif(valor_transferencia > 5000.00):
+        print(error_message('valor de transferência maior que R$ 5.000,00'))
+        return False
+    else:
         print(success_message(-valor_transferencia, valor_transferencia))
         return True
-    else:
-        print(error_message('teste'))
-        return False
 
 
 def validation_ted(valor_transferencia):
-    if(valor_transferencia >= 5000.00 or valor_transferencia <= 10000.00):
+    if(valor_transferencia < 5000.00):
+        print(error_message('valor menor que R$ 5.000,00'))
+        return False
+    elif(valor_transferencia > 10000.00):
+        print(error_message('valor maior que R$ 10.000,00'))
+        return False
+    else:
         print(success_message(-valor_transferencia, valor_transferencia))
         return True
-    else:
-        print(error_message('teste'))
-        return False
 
 
 def validation_doc(valor_transferencia):
