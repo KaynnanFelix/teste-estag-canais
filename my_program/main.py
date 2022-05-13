@@ -21,6 +21,7 @@ with open('entrada.txt', 'r', encoding='utf-8') as file:
 
             sender_account = Account(
                 result['nome_emissor'], result['agencia_emissor'], result['conta_emissor'], result['cpf_emissor'])
+                
             receiver_account = Account(
                 result['nome_receptor'], result['agencia_receptor'], result['conta_receptor'], result['cpf_receptor'])
 
