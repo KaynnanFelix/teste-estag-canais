@@ -2,7 +2,7 @@ from messages import error_message, success_message
 
 
 def validation_pix(valor_transferencia):
-    if (valor_transferencia < 0.00):
+    if (valor_transferencia <= 0.00):
         print(error_message('valor de transferência menor ou igual R$ 0,00'))
         return False
     elif(valor_transferencia > 5000.00):
